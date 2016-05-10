@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Linkme - Link Sharing done right",
+  "description": "Share links with friends, and have personalized conversations around them.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+    
+  "permissions": [
+      "tabs", "webRequest", "http://linkme-web.azurewebsites.net/*", "http://*/"
+  ],
+    
+    "content_scripts": [ {
+        "js": [ "jquery-1.12.3.min.js"],
+        "matches": [ "http://*/*", "https://*/*"]
+    }]
+}
