@@ -9,8 +9,10 @@
     "permissions": [
         "tabs",
         "webRequest",
+        "storage",
         "http://linkme-web.azurewebsites.net/*",
-        "http://*/"
+        "http://*/",
+        "http://*.facebook.com/*"
     ],
     "content_scripts": [
         {
@@ -25,5 +27,8 @@
     ],
     "icons": {
         "128": "linkme_logo_128x128.png"
+    },
+    "background": {
+        "page": "background.html"
     }
 }
