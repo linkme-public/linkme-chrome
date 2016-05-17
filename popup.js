@@ -17,7 +17,10 @@ chrome.tabs.query({
     updatePopup("Posting ...", extractedLink);
 
     // Post to API
-    var params = { "link": extractedLink }
+    var params = {
+      "link": extractedLink,
+      "facebookAccessToken": localStorage.accessToken
+    };
 
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
